@@ -8,7 +8,11 @@
  */
 add_shortcode('date', function() {
 	return get_the_title();
-	return date('Y年 n月 j日');
+	// return date('Y年 n月 j日');
+});
+
+add_shortcode('sum', function($atts) {
+	return $atts['x'] + $atts['y'];
 });
 
 add_action('init', function() {
